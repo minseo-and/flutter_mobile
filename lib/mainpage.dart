@@ -11,7 +11,11 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    throw Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('메인페이지'),
+      ),
+    );
   }
 
 }

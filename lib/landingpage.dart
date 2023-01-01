@@ -3,6 +3,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sns/mainpage.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -11,7 +13,13 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
 
-
+  @override
+  void initState() {
+    Timer(Duration(seconds: 3), (){
+      Get.to(MainPage());
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

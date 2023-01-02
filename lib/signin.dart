@@ -1,6 +1,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sns/mainpage.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -53,7 +55,31 @@ class _SignInState extends State<SignIn> {
                 image: AssetImage('assets/image/logo.png'),
                 fit: BoxFit.fitWidth,
               ),
-            )
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MainPage())
+                );
+              },
+              child: Container(
+                alignment: Alignment.bottomCenter,
+                margin: EdgeInsets.only(top: 500),
+                width: 280,
+                height: 50,
+                decoration: const BoxDecoration(
+                  color: Color(0xff1EB79A),
+                  borderRadius: BorderRadius.all(Radius.circular(30))
+                ),
+
+                  child: const Center(
+                    child: Text('로그인',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ),
+              ),
+            ),
           ],
         )
     );

@@ -1,5 +1,3 @@
-
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sns/mainpage.dart';
@@ -14,8 +12,9 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: MainPage()
+    return MaterialApp(
+      home: SignIn(),
     );
+
   }
 }

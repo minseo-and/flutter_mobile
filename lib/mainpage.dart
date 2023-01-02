@@ -1,5 +1,9 @@
 
 import 'package:flutter/material.dart';
+import 'package:sns/navigation/animalscreen.dart';
+import 'package:sns/navigation/feedscreen.dart';
+import 'package:sns/navigation/mapscreen.dart';
+import 'package:sns/navigation/userscreen.dart';
 
 
 class MainPage extends StatefulWidget {
@@ -36,6 +40,13 @@ class _MainPageState extends State<MainPage> {
 
   ];
 
+  List pages = [
+    AnimalScreen(),
+    MapScreen(),
+    FeedScreen(),
+    UserScreen()
+  ];
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -57,6 +68,7 @@ class _MainPageState extends State<MainPage> {
           },
         items: bottomItems
       ),
+      body: pages[_selectedIndex],
     );
   }
 

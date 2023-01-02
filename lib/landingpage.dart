@@ -4,7 +4,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sns/mainpage.dart';
+import 'package:sns/signin.dart';
+import 'package:transition/transition.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -16,7 +17,8 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     Timer(Duration(seconds: 3), (){
-      Get.to(MainPage());
+      Get.to(SignIn());
+
     });
     super.initState();
   }
